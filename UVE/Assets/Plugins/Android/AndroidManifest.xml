@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.unity3d.player"
+    xmlns:tools="http://schemas.android.com/tools">
+
+	<!-- ESSA VERSÃO FUNCIONA EM TODAS AS VERSÕES À PARTIR DO 8.1
+  Antes de executar, no Android 12 e acima, ir nas configurações do APP e permitir
+  "Dispositivos Próximos" (Nearby devices) -->
+
+	<uses-feature android:name="android.hardware.bluetooth_le" android:required="true"/>
+	<uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+	<uses-permission android:name="android.permission.BLUETOOTH_SCAN"/>
+	<uses-permission android:name="android.permission.BLUETOOTH_CONNECT"/>
+	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+
+	<uses-permission android:name="android.permission.BLUETOOTH"
+					 android:maxSdkVersion="30" />
+	<uses-permission android:name="android.permission.BLUETOOTH_ADMIN"
+					 android:maxSdkVersion="30" />
+
+	<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" android:minSdkVersion="31"/>
+	<uses-permission android:name="android.permission.BLUETOOTH_ADVERTISE" android:minSdkVersion="31" />
+
+
+	<application>
+		<activity android:name="com.unity3d.player.UnityPlayerActivity"
+				  android:theme="@style/UnityThemeSelector">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.LAUNCHER" />
+			</intent-filter>
+		</activity>
+	</application>
+
+
+</manifest>
